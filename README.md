@@ -1,7 +1,7 @@
 justitium - Open online judge server
 ===========
 
-Justitum if OPen online judge server for C-language( and others will be added) for Data Engineering Lab.
+Justitum is Open online judge server for C-language( and others will be added) for Data Engineering Lab.
 
 
 What is Data Engineering Lab?

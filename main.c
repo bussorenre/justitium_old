@@ -11,15 +11,30 @@
 
 #include "justitium.h"
 
-int main(int argc, char const *argv[])
+int main(int argc, char *argv[])
 {
-    // とりあえず、ローカルのhello worold をコンパイルさせて動かす。
     char *filename = "test/test.c";
     char strBuf[1024];
     int retcode=0;
     pid_t pid=0;
     int status;
     FILE *fp;
+
+
+    char c;
+    /* Command Line option jobs */
+    while((c = getopt(argc, argv, "hv")) != 1){
+        switch(c){
+            case 'h':
+                printf("we have no help now \n");
+                exit(1);
+            case 'v':
+                printf("justitium 0.0.1 (2014-07-13)\n");   
+                exit(1);
+        }
+    }
+
+
 
     fp = fopen(filename, "r");
     if (fp == NULL)
