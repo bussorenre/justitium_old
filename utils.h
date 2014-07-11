@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  utils.h - online judge system justitam
+  utils.h - online judge system
 
   $Author$
   created at: Fri Jul 11 23:07:50 JST 2014
@@ -11,7 +11,7 @@
 
 #ifndef __UTILS_H__
 
-#include "justitam.h"
+#include "justitium.h"
 
 
 

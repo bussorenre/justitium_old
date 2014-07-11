@@ -15,10 +15,10 @@
 OBJDIR := build
 
 # justitam user name
-USERNAME := justitam
+USERNAME := justitium
 
 # justitam
-GROUPNAME := justitam
+GROUPNAME := justitium
 
 
 

@@ -9,7 +9,7 @@
 
 **********************************************************************/
 
-#include "justitam.h"
+#include "justitium.h"
 
 int main(int argc, char const *argv[])
 {
