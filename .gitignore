@@ -23,4 +23,4 @@
 *.hex
 
 # output file
-buiild/*
+build/*
