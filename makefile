@@ -6,44 +6,43 @@
 # created at: Tue Jul  8 11:58:53 JST 2014
 
 # Copyright (C) 2014-2015 Ryo Matsumoto
+# respected	http://urin.github.io/posts/2013/simple-makefile-for-clang/
 
 #**********************************************************************
 
-
-
-# build target directory
-OBJDIR := build
-
 # justitam user name
-USERNAME := justitium
+#USERNAME := justitium
 
 # justitam
-GROUPNAME := justitium
+#GROUPNAME := justitium
+
+CC       = gcc
+CFLAGS   = 
+LDFLAGS  =
+LIBS     =
+INCLUDE  = -I ./src
+TARGET   = ./bin/justitium
+OBJDIR   = ./obj
+ifeq "$(strip $(OBJDIR))" ""
+  OBJDIR = .
+endif
+SOURCES  = $(wildcard *.c)
+OBJECTS  = $(addprefix $(OBJDIR)/, $(SOURCES:.c=.o))
+DEPENDS  = $(OBJECTS:.o=.d)
+
+$(TARGET): $(OBJECTS) $(LIBS)
+	$(CC) -o $@ $^ $(LDFLAGS)
 
 
+$(OBJDIR)/%.o: %.c
+	@[ -d $(OBJDIR) ] || mkdir -p $(OBJDIR)
+	$(CC) $(CFLAGS) $(INCLUDE) -o $@ -c $<
 
-#################################################
-.PHONY: install
-install: all
-	
-
-.PHONY: run
-run: all
-	./$(OBJDIR)/latest
-
-.PHONY: all
-all: make_directories $(OBJDIR)/latest
-
-$(OBJDIR)/latest: main.c
-	gcc -o $(OBJDIR)/latest main.c
-
-$(OBJDIR)/:
-	mkdir -p $@
+all: clean $(TARGET)
 
 
-.PHONY: make_directories 
-make_directories: $(OBJDIR)/
-
-.PHONY: clean
 clean:
-	rm -rf $(OBJDIR)
+	rm -f $(OBJECTS) $(DEPENDS) $(TARGET)
+	@rmdir --ignore-fail-on-non-empty `readlink -f $(OBJDIR)`
+
+-include $(DEPENDS)
