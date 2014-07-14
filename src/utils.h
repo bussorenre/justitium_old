@@ -10,8 +10,21 @@
 **********************************************************************/
 
 #ifndef __UTILS_H__
+#include <unistd.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <limits.h>
 
-#include "justitium.h"
+
+typedef struct{
+    int debug;
+    int port;
+}jj_options;
+
+void starting_message(jj_options *opt);
+void analyze_args(int argc, char* argv[], jj_options *opt);
 
 
 

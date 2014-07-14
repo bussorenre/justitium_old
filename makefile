@@ -40,6 +40,9 @@ $(OBJDIR)/%.o: %.c
 
 all: clean $(TARGET)
 
+run: $(TARGET)
+	./$(TARGET)
+
 
 clean:
 	rm -f $(OBJECTS) $(DEPENDS) $(TARGET)

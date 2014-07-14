@@ -11,12 +11,10 @@
 
 #ifndef __JUSTITIUM_H__
 
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <errno.h>
-#include <limits.h>
+#include "utils.h"
+
+
+void server_main(jj_options *opt);
 
 
 #endif /* __JUSTITIUM_H__ */
