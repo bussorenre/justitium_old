@@ -24,6 +24,19 @@ int main(int argc, char *argv[])
 
     /* starting_server */
     starting_message(&opt);
+
+    /* daemonize server when not debug mode */
+    if(opt.debug == 0)
+    {
+        if(become_daemon())
+        {
+            perror(NULL);
+            exit();
+        }
+
+    }
+
+    /* server loop */
     server_main(&opt);
 
     return 0;

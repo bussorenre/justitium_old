@@ -25,7 +25,7 @@ typedef struct{
 
 void starting_message(jj_options *opt);
 void analyze_args(int argc, char* argv[], jj_options *opt);
-
+int become_daemon();
 
 
 #endif /* __UTILS_H__ */

@@ -29,6 +29,7 @@ endif
 SOURCES  = $(wildcard *.c)
 OBJECTS  = $(addprefix $(OBJDIR)/, $(SOURCES:.c=.o))
 DEPENDS  = $(OBJECTS:.o=.d)
+RUNFLAGS = -d -p 9999
 
 $(TARGET): $(OBJECTS) $(LIBS)
 	$(CC) -o $@ $^ $(LDFLAGS)
@@ -41,7 +42,7 @@ $(OBJDIR)/%.o: %.c
 all: clean $(TARGET)
 
 run: $(TARGET)
-	./$(TARGET)
+	$(TARGET) $(RUNFLAGS)
 
 
 clean:

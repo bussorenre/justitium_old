@@ -19,6 +19,8 @@ void starting_message(jj_options *opt)
     printf("starting justitium server...\n");
     printf("time\t : %s",ctime(&timer));
     printf("url\t : 127.0.0.1:%d\n",opt->port);
+    printf("justitium server is alive now!\n"
+           "If you want to end this process, use kill command\n");
     return;
 }
 
@@ -48,4 +50,10 @@ void analyze_args(int argc, char* argv[], jj_options *opt)
     }
 
     return;
+}
+
+
+int become_daemon()
+{
+    return daemon(0,0);
 }
