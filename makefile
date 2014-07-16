@@ -17,7 +17,7 @@
 #GROUPNAME := justitium
 
 CC       = gcc
-CFLAGS   = 
+CFLAGS   = -lpthread
 LDFLAGS  =
 LIBS     =
 INCLUDE  = -I ./src

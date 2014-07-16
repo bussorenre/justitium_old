@@ -10,7 +10,7 @@
 **********************************************************************/
 
 #include "utils.h"
-#include "time.h"
+#include <time.h>
 
 void starting_message(jj_options *opt)
 {

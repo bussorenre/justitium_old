@@ -20,7 +20,7 @@
 
 typedef struct{
     int debug;
-    int port;
+    unsigned short int port;
 }jj_options;
 
 void starting_message(jj_options *opt);

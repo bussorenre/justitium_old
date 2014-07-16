@@ -14,7 +14,7 @@
 #include "utils.h"
 
 
-void server_main(jj_options *opt);
+int server_main(jj_options *opt);
 
 
 #endif /* __JUSTITIUM_H__ */

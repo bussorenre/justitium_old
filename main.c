@@ -31,14 +31,13 @@ int main(int argc, char *argv[])
         if(become_daemon())
         {
             perror(NULL);
-            exit();
+            exit(1);
         }
 
     }
 
     /* server loop */
-    server_main(&opt);
+    return server_main(&opt);
 
-    return 0;
 }
 
