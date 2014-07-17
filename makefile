@@ -17,8 +17,8 @@
 #GROUPNAME := justitium
 
 CC       = gcc
-CFLAGS   = -lpthread
-LDFLAGS  =
+CFLAGS   = 
+LDFLAGS  = -lpthread
 LIBS     =
 INCLUDE  = -I ./src
 TARGET   = ./bin/justitium
