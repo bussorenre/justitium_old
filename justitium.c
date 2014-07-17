@@ -86,7 +86,7 @@ void *judge_thread_func(void *param)
 {
     char filename[NAME_MAX] = {0};
     char currentPath[PATH_MAX] = {0};
-    char command[ARG_MAX] = {0};
+    char command[_POSIX_ARG_MAX] = {0};
     char gcc[] = "gcc -o a.out ";
     int retcode = 0;
     pid_t pid = 0;
