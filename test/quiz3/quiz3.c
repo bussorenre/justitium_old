@@ -1,22 +1,22 @@
 /**********************************************************************
 
-  test.c - online judge system
+  quiz3.c - 03: swapping integer
 
-  $Author$
-  created at: Tue Jul  8 11:58:53 JST 2014
+  Ryo Matsumoto
+    - Data Engineering Lab
+    - Ritsumeikan University
 
-  Copyright (C) 2014-2015 Ryo Matsumoto
+  created at: Sun Aug 24 21:42:08 JST 2014
 
 **********************************************************************/
 
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
-#include <errno.h>
+#include <string.h>
+
 
 int main(int argc, char const *argv[])
 {
-    printf("Hello world!! \n");
+    /* code */
     return 0;
 }
-
